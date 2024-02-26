@@ -1,0 +1,10 @@
+package com.romashka.projectmanager.ViewModel
+
+import androidx.lifecycle.ViewModel
+import com.romashka.projectmanager.Repository.MainRepository
+
+class MainViewModel(val repository: MainRepository): ViewModel() {
+    constructor():this(MainRepository())
+
+    fun loadData() = repository.items
+}
